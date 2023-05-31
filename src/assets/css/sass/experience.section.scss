@@ -1,0 +1,69 @@
+
+#IntelExperience {
+    display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    height: 480px;
+    position: relative;
+    z-index: 1;
+}
+
+#IntelExperience-Card {
+    background: #0040ff;
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    width: 248px;
+    padding: 38px;
+}
+    
+
+#IntelExperience-Card-Header {
+    padding-bottom: 14px;
+}
+
+#IntelExperience-Card-Header h2 {
+    line-height: 25px;
+}
+
+#IntelExperience-Card-Content p {
+    font-size: 12px;
+    font-weight: lighter;
+}
+    
+#IntelExperience::before {
+    position: absolute;
+    content: "";
+    background-image: url("../images/Girl-desktop.png");
+    background-size: contain;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 324px;
+    z-index: -1;
+}
+
+
+@media (min-width: 768px) {
+
+    #IntelExperience {
+        align-items: flex-end;
+        margin: 0 auto;
+        width: 665px;
+        padding: 51px;
+    }
+
+    #IntelExperience::before {
+        background-repeat: no-repeat;
+        width: 401px;
+        height: 370px;
+        top: 30%;
+    }
+
+    #IntelExperience-Card {
+        width: 314px !important;
+        height: 262px;
+        justify-content: center;
+    }
+
+}

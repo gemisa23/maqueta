@@ -1,0 +1,116 @@
+#NotebooOrDesktop {
+        background-color: #0040ff;
+        color: white;
+        display: flex;
+                align-items: center;
+        height: 122.3px;
+        width: 189.9px;
+        padding-left: 22px;
+        margin-bottom: 142px;
+        position: relative;
+}
+
+#NotebooOrDesktop::before {
+        background-image: url('../images/Gaming_Portal_Tile_Daisy.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        content: '';
+        position: absolute;
+        width: 267px;
+        height: 267px;
+        isolation: isolate;
+        z-index: -1;
+        top: -1em;
+        left: calc(100vw - 267.7px - 32px);
+}
+
+#NotebooOrDesktop::after {
+        background-image: url('../images/Laptop-desktop.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 235.6px;
+        isolation: isolate;
+        z-index: 2;
+        top: 2em;
+        left: calc(100vw - 267.7px - 7em );  
+}
+
+#ChoosingTips-Title {
+        font-size: 25px;
+}
+
+#HowToChoose {
+        margin-bottom: 47.6px;
+        margin-top: 20px;
+}
+
+#HowToChoose header {
+        margin-bottom: 10px;
+}
+
+#HowToChoose p {
+        font-size: 12px;
+}
+
+
+#DesktopCharacteristics  header , 
+#NotebookCharacteristics header {
+        margin-bottom: 16px;
+}
+
+#DesktopCharacteristics  h2 , 
+#NotebookCharacteristics h2 {
+        font-size: 16px;
+}
+
+
+.Characteristic {
+        background-color: #0040ff;
+        display: flex;
+                align-items: center;
+        
+        font-size: 12px;
+        height: 52px;
+        width: 288px;
+        margin-bottom: 21px;
+}
+
+.CharacteristicIcon {
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: 15px;
+        margin-right: 10px;
+}
+
+.CharacteristicIcon.Star {
+        background-image: url('../images/Star-icon_2.png');
+        height: 22.9px;
+        width: 24px;
+}
+
+.CharacteristicIcon.House {
+        background-image: url('../images/Home-icon.png');
+        height: 20px;
+        width: 24px;
+}
+
+.CharacteristicIcon.Ok {
+        background-image: url('../images/Ok-icon.png');
+        height: 23px;
+        width: 24px;
+}
+
+.CharacteristicIcon.IO {
+        background-image: url('../images/Puertos-icon.png');
+        height: 24.8px;
+        width: 21px;
+}
+
+.CharacteristicIcon.Modular {
+        background-image: url('../images/Actualizar-icon.png');
+        height: 24px;
+        width: 16.8px;
+}

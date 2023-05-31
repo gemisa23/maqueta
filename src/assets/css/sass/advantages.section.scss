@@ -1,0 +1,110 @@
+#IntelAdvantages {
+    display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "title"
+            "image"
+            "content";
+        grid-template-rows: auto 250px auto;
+}
+
+
+#IntelAdvantages-TitleCell {
+    grid-area: title;
+}                   
+
+#IntelAdvantages-MainTitle {
+    max-width: 288px;
+    text-align: center;
+    margin-bottom: 17px;
+}
+
+#IntelAdvantages-ImageCell {
+    grid-area: image;
+    display: flex;
+}
+
+#IntelAdvantages-ImageCell {
+    background-image: url('../images/Laptop_12.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 346px;
+    width: 100%;
+}
+
+#IntelAdvantages-SubtitleCell {
+    grid-area: "content";
+}
+
+
+#IntelAdvantages-SecondaryTitle {
+    margin-bottom: 17px;
+}
+
+#IntelAdvantages-Paragraph {
+    font-size: 12px;
+}
+
+
+@media (min-width: 768px) {
+
+
+    #IntelAdvantages {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "image image title   title   title"
+            "image image content content content"
+            "image image content content content";
+        position: relative;
+    }
+
+    #IntelAdvantages-ImageCell {
+        grid-column: span 4;
+        grid-area: image;
+        height: 376px;
+        width: 374px;
+        position: relative;
+            top: -1.5em;
+    }
+
+    #IntelAdvantages-TitleCell {
+        grid-area: title;
+    }
+
+    #IntelAdvantages-SubtitleCell {
+        grid-column: span 8;
+        grid-area: content;
+    }
+
+
+
+    #IntelAdvantages-MainTitle {
+        text-align: left;
+    }
+
+}
+
+@media (min-width: 1366px) {
+
+    #IntelAdvantages {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: 
+            "image image title   title   title   title     title title"
+            "image image content content content content   .     .    "
+            "image image content content content content   .     .    ";
+    }
+
+    #IntelAdvantages-ImageCell {
+        height: 568px;
+        width: 615px;
+        top: -4em; /* No me acuerdo de dónde saqué esto */
+    }
+
+    #IntelAdvantages-MainTitle {
+        font-size: 40px;
+        max-width: unset;
+    }
+
+}

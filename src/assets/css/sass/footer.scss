@@ -1,0 +1,21 @@
+footer {
+    width: 100vw;
+    height: 60px;
+    background-color: #0040FF;
+    display: flex;
+        align-items: center;
+    color: white;
+}
+
+footer span {
+    margin-left: 36px;
+}
+
+footer i {
+    background-image: url('../images/arrow-1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15.4px;
+    height: 9px;
+    margin-left: 32.6px;
+}

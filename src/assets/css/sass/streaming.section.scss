@@ -1,0 +1,155 @@
+
+#StreamingTips {
+    display: grid;
+        grid-template-areas: 
+            "header" 
+            "hardware"
+            "software";
+}
+    
+    
+#StreamingTips-HeaderCell {
+    grid-area: header;
+}
+
+#StreamingTips-Title {
+    line-height: 30px;
+    margin-bottom: 23.7px;
+}
+    
+#StreamingTips-HardwareCell {
+    grid-area: hardware;
+    height: 498px;
+    position: relative;
+}
+    
+header {
+    margin-top: 23.7px;
+}
+
+#StreamingTips-Content1 {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+#StreamingTips-Content2 {
+    margin-top: 15px;
+    font-family: 'IntelOne Display';
+    font-weight: 500;
+    font-size: 12px;
+}
+    
+  
+#StreamingTips-HardwareCell::before {
+    content: '';
+    background-image: url('../images/Mask Group 2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 257px;
+    width: 100vw;
+    position: absolute;
+        bottom: 0;
+        left: -36px;
+    z-index: -1;
+}
+
+    
+#StreamingTips-SoftwareCell {
+    grid-area: software;
+    height: auto;
+}
+    
+header {
+    margin-bottom: 30px;
+}
+    
+.StepItem {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-areas: "icon title title title"
+                            "text text text text";
+    margin-bottom: 70px;
+    position: relative;
+    padding-left: 20px;
+}
+    
+.StepItem::before {
+    background-color: #0040ff;
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 120%;
+    left: 0;
+    top: -10%;
+}
+    
+.StepIcon {
+    grid-area: icon;
+    height: 33.6px;
+    width: 40.3px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 13.7px;
+}
+
+.StepIcon-Wifi {
+    background-image: url('../images/Icon-Step1.png');
+
+}
+
+.StepIcon-Settings {
+    background-image: url('../images/Icon-Step2.png');
+}
+
+.StepIcon-Connection {
+    background-image: url('../images/Icon-Step3.png');
+}
+
+.StepTitle {
+    grid-area: title;
+    text-transform: uppercase;
+    align-self: center;
+}
+    
+.StepItem p {
+    grid-area: text;
+    margin-top: 16px;
+    font-size: 12px;
+}
+    
+#RecommendationCard-Container {
+    background-image: url('../images/Mask Group 3.png');
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
+    display: flex;
+        justify-content: center;
+    height: 317.4px;
+    width: calc(100% + 72px);
+    position: relative;
+    left: -36px;
+}
+    
+#RecommendationCard {
+    background-color: #000f8a;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    width: 248px;
+    height: 157px;
+    padding: 35px;
+    font-size: 12px;
+    position: absolute;
+        bottom: 0;
+}
+                 
+#Hardware,
+#Software {
+    margin-top: 17px;
+}
+
+#Hardware h3, 
+#Software h3 {
+    margin-bottom: 15px;
+}

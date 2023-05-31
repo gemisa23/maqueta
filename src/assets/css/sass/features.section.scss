@@ -1,0 +1,179 @@
+#IntelFeatures {
+        display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "image"
+                                 "first_features"
+                                 "second_features";
+}
+
+#LaptopGif-Tablet {
+    display: none;
+}
+
+#LaptopGif-Desktop {
+    display: none;
+}
+
+
+#IntelFeatures-Header {
+    grid-area: image;
+    text-align: center;
+}
+
+.IntelFeatures-FeaturesList {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    width: 100%;
+}
+
+.IntelFeatures-FeaturesList li {
+    background: #0040ff;
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+    width: 288px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: 14px;
+}
+
+.FeatureDropdown {
+    display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-areas: 
+            "icon name arrow"
+            "text text text";
+    padding: 18.8px;
+}
+
+.FeatureDropdown-Title {
+    font-weight: normal;
+    grid-area: name;
+    flex-grow: 1;
+    margin-left: 25.9px;
+}
+
+.FeatureIcon {
+    background-size: contain;
+    background-position: no-repeat;
+    grid-area: icon;
+}
+
+.FeatureIcon-Optane {
+    background-image: url('../images/Optane-icon.png');
+    width: 30.7px;
+    height: 22.2px;
+}
+
+.FeatureIcon-Boost {
+    background-image: url('../images/Turbo-Boost-icon.png');
+    width: 30.4px;
+    height: 30.4px;
+}
+
+.FeatureIcon-WiFi {
+    background-image: url('../images/Wifi-icon.png');
+    width: 30.3px;
+    height: 21.4px;
+}
+
+.FeatureIcon-Thunderbolt {
+    background-image: url('../images/Thunderbolt-icon.png');
+    width: 26px;
+    height: 30.5px;
+}
+
+.FeatureArrow {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15.4px;
+    height: 9.5px;
+    grid-area: arrow;
+}
+
+.FeatureArrow-Expand {
+    background-image: url('../images/arrow-4.png');
+}
+
+.FeatureArrow-Minimize {
+    background-image: url('../images/arrow-1.png');
+}
+
+.FeatureDropdown .FeatureDropdown-Content {
+    display: none;
+}
+
+.FeatureDropdown.expanded .FeatureDropdown-Content {
+    display: block;
+    margin-top: 19px;
+    grid-area: text;
+}
+
+.FeatureDropdown.expanded {
+    display: grid;
+}
+
+
+
+@media (min-width: 768px) {
+
+    #IntelFeatures {
+        display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto auto;
+            grid-template-areas: 
+                "image . first_features first_features"
+                "image . first_features first_features"
+                "image . second_features second_features"
+                "image . second_features second_features";
+        max-width: 665px;
+        margin: 0 auto;
+    }
+
+    #IntelFeatures-ImageCell {
+        display: flex;
+        grid-area: image;
+        align-items: center;
+    }
+
+    #LaptopGif-Mobile {
+        display: none;
+    }
+
+    #LaptopGif-Tablet {
+        display: inline-block;
+        height: 317px;
+    }
+
+
+    .IntelFeatures-FeaturesList li:first-child {
+        margin-top: 0;
+    }
+
+    .IntelFeatures-FeaturesRowCell {
+        margin: 0;
+    }
+
+    #IntelFeatures-FirstFeaturesRowCell {
+        grid-area: first_features;
+        margin-bottom: 11px;
+    }
+
+    #IntelFeatures-SecondFeaturesRowCell {
+        grid-area: second_features;
+    }
+
+    .FeatureDropdown {
+        height: 68px;
+        width: 312px !important;
+    }
+
+    .FeatureDropdown.expanded {
+        height: 189px; /* La concha de dios */
+        grid-template-columns: 31px 1fr 15.39px;
+    }
+
+
+}

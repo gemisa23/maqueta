@@ -1,0 +1,162 @@
+.main-header {
+    /* - - - - - - */
+    display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "LogoCell BadgesCell"
+            "InfoCell InfoCell";
+    /* - - - - - - */
+    grid-column: span 4;
+    padding: 17px 36px 0px 36px; // top right bottom left
+    /* - - - - - - */
+}
+
+#IntelLogoCell {
+    /* - - - - - - */
+    display: flex;
+        flex-direction: column-reverse;
+    /* - - - - - - */
+    grid-area: LogoCell;
+    height: 242px;
+    /* - - - - - - */
+}
+
+#Logo {
+    width: 74px;
+    height: 29px;
+}
+
+#IntelBadgesCell {
+    /* - - - - - - */
+    display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    /* - - - - - - */
+    grid-area: BadgesCell;
+    height: 242px;
+}
+
+
+#Badges {
+    width: 114px;
+    height: 46px;
+}
+
+
+#HeaderInfoCell {
+    grid-area: InfoCell;
+}
+
+#MainHeaderInfoContainer {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+    height: 100%;
+}
+
+#MainTitle {
+    font-family: 'IntelOne Display';
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+
+#MainTitleSubtext {
+    font-family: 'IntelOne Display';
+    font-size: 12px;
+    font-weight: 300;
+    font-stretch: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fffd;
+    margin-bottom: 31px;
+}
+
+#BuyAnchor {
+    background: rgba(17, 70, 245, 0.32);
+    border: solid 1px #1146f5;
+    border-style: inset;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+    height: 40px;
+    width: 168px;
+}
+
+
+.main-header::before {
+    content: "";
+    background-image: url("../images/header-img-desktopgirl.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+        top: 0;
+        right: 0;
+    width: 360px;
+    height: 242px;
+    z-index: -1;
+}
+
+
+
+
+@media (min-width: 768px) {
+
+    #IntelBadgesCell {
+        display: none !important;
+    }
+
+    .main-header {
+        position: relative;
+        grid-template-areas: 
+            "LogoCell LogoCell LogoCell LogoCell"
+            "InfoCell InfoCell . .";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        padding-left: 51px;
+        padding-top: 69px;
+    }
+
+    .main-header::before {
+        display: none;
+    }
+
+    #IntelLogoCell {
+        grid-area: LogoCell;
+        height: auto !important;
+    }
+
+    #HeaderInfoCell {
+        grid-area: InfoCell;
+    }
+
+    #MainHeaderInfoContainer {
+        align-items: flex-start !important;
+    }
+
+    #MainTitleSubtext {
+        text-align: left;
+    }
+
+}
+
+
+@media (min-width: 1366px) {
+
+    .main-header {
+        grid-template-areas: 
+        "LogoCell LogoCell LogoCell LogoCell"
+        "InfoCell InfoCell . ."
+        ".        .        . .";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto 138px;
+        padding-left: 139px;
+        padding-top: 0px;
+        height: 554px;
+    }
+
+
+}

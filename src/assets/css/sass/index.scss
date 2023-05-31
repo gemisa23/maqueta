@@ -1,0 +1,54 @@
+
+#EncabezadoPrincipal {
+        /* - - - */
+        display: grid;
+                grid-template-areas: 
+                        "INTEL   INTEL   INSIGNIA INSIGNIA"
+                        "TITULO  TITULO  TITULO   TITULO"
+                        "TEXTO   TEXTO   TEXTO    TEXTO"
+                        "COMPRAR COMPRAR COMPRAR  COMPRAR";
+
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows   : auto auto auto auto;
+        /* - - - */
+}
+
+/*
+* TABLET
+*/
+
+
+@media (min-width: 768px) {
+
+        #EncabezadoPrincipal {
+                grid-template-areas: 
+                        "INTEL   .       .        ."
+                        "TITULO  TITULO  .        ."
+                        "TEXTO   TEXTO   .        ."
+                        "COMPRAR .       .        INSIGNIA";
+                
+                grid-template-rows   : auto auto auto auto;
+        }
+
+        
+}
+
+
+/*
+* DESKTOP
+*/
+
+@media (min-width: 1366px) {
+
+
+        #EncabezadoPrincipal {
+                grid-template-areas: 
+                        "INTEL   .       .        ."
+                        "TITULO  TITULO  .        ."
+                        "TEXTO   TEXTO   .        ."
+                        "COMPRAR .       .        ."
+                        ".       .       .        .";
+        }
+
+
+}
